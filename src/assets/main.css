@@ -78,6 +78,9 @@ p{
 .n-card.n-card--content-segmented > .n-card__content:not(:first-child), .n-card.n-card--content-soft-segmented > .n-card__content:not(:first-child){
   border: none;
 }
+.single-card .n-card > .n-card-header {
+    padding: 15px 20px 0px 25px;
+}
 
 /*Light css*/
 html{

@@ -27,9 +27,9 @@
                 <img :src="card.value.image" style="max-width: 300px" />    
             </div>
             <div class="d-block p-3 pt-0">
-                <h2 class="">
+                <h3 class="">
                     {{ card.value.firstName }} {{ card.value.lastName }}
-                </h2>
+                </h3>
                 <p class="pb-2">{{ card.value.email }}</p>
                 <p class="pb-2 pt-2"><span class="font-bold w-150">Phone:</span> {{ card.value.phone }}</p>
                 <p class="pb-2 pt-2"><span class="font-bold w-150">Gender:</span> <strong>{{card.value.gender}}</strong></p>
