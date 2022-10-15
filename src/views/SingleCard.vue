@@ -1,5 +1,5 @@
 <template>
-  <n-layout embedded content-style="padding: 24px;">
+  <n-layout embedded content-style="padding: 24px;" class="single-card">
     <n-row :gutter="[12, 8]">
     <n-col :span="4">
     </n-col>

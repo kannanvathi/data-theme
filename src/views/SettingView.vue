@@ -5,7 +5,7 @@
         {{isDark ? 'Dark Mode' : 'Light Mode'}}
         </n-tag>
         <n-button type="info" @click="toggleDark()">
-        Toggle color mode
+          Toggle color mode
         </n-button>
   </div>
 </div>
@@ -39,5 +39,4 @@ export default {
         flex-direction: column;
         transform: translate(-50%, -50%);
     }
-    
 </style>

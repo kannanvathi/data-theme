@@ -1,21 +1,33 @@
 <template>
   <n-layout embedded content-style="padding: 24px;">
-    <n-card v-if="!data.value.length">
-      <n-space>
-        <n-spin size="large" />
-      </n-space>
-    
-    </n-card>
-    
-    <n-card v-else>
-      <n-data-table
-        :columns="columns"
-        :data="data.value"
-        :pagination="pagination"
-        :max-height="400"
-        :scroll-x="1800"
-      />
-    </n-card>
+    <n-row v-if="!data.value.length">
+      <n-col :span="6"> </n-col>
+      <n-col :span="12">
+        <n-card>
+          <n-space>
+            <div
+              class="d-flex align-item-center justify-content-center w-100 p-3"
+            >
+              <n-spin size="large" />
+              <h4 class="ml-2">Loading data ...</h4>
+            </div>
+          </n-space>
+        </n-card>
+      </n-col>
+    </n-row>
+    <n-row v-else>
+      <n-col :span="24">
+        <n-card>
+          <n-data-table
+            :columns="columns"
+            :data="data.value"
+            :pagination="pagination"
+            :max-height="400"
+            :scroll-x="1800"
+          />
+        </n-card>
+      </n-col>
+    </n-row>
   </n-layout>
 </template>
 
@@ -26,7 +38,7 @@ const createColumns = () => [
   {
     title: "API",
     key: "API",
-     fixed: "left",
+    fixed: "left",
     width: 100,
   },
   {
@@ -62,7 +74,7 @@ const createColumns = () => [
 export default defineComponent({
   setup() {
     const store = useStore();
-    const data = reactive({value: []});
+    const data = reactive({ value: [] });
     function loadData() {
       store.dispatch("getTableData").then((res) => {
         //data = res.entries;
@@ -79,3 +91,11 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+.n-space > div{
+  width: 100%;
+}
+.justify-content-center{
+  justify-content: center;
+}
+</style>

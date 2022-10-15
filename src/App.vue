@@ -14,7 +14,9 @@ export default {
     return {};
   },
   mounted() {
-    
+    this.$store.dispatch("setThemeGlobal").then(res => {
+      console.log(res);
+    })
   },
 
   beforeDestroy() {},

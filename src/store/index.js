@@ -3,6 +3,8 @@ import tableStore from "./table/index.js";
 import cardStore from "./table/index.js";
 import axios from "axios";
 import urls from "./config.js";
+import { useDark, useToggle } from "@vueuse/core";
+
 const store = createStore({
   state: {
     tableData: [],
@@ -55,6 +57,9 @@ const store = createStore({
     },
   },
   actions: {
+    setThemeGlobal() {
+      const isDark = useDark();
+    },
     searchQuery(context, query) {
       context.commit("searchQuery", query);
     },
