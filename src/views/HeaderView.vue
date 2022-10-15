@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import SearchView from "./SearchView.vue"
 import { defineComponent, h } from "vue";
 import { NIcon } from "naive-ui";
 import { RouterLink } from "vue-router";
@@ -64,7 +63,6 @@ const menuOptions = [
 
 export default defineComponent({
   components: {
-    SearchView,
     SearchBar
   },
   setup() {
